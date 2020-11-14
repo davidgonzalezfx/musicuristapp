@@ -6,7 +6,7 @@ let bodyParser = require('body-parser');
 // Initialize express
 const app = express();
 // Import routes
-let apiRoutes = require('./routes/endpoints.js');
+let apiRoutes = require('./server/routes/endpoints.js');
 // Configure bodyparser to handle post requests
 app.use(
   bodyParser.urlencoded({
