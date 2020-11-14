@@ -1,5 +1,3 @@
-const querystring = require('querystring');
-
 // Handle search actions
 exports.search = function (req, res) {
   res.json({
