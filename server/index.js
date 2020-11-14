@@ -19,10 +19,10 @@ app.use(bodyParser.json());
 app.use('/api', apiRoutes);
 
 if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('ntagram/build'))
+	app.use(express.static('front/build'))
 	const path = require('path')
 	app.get('*', (req, res) => {
-			res.sendFile(path.resolve(__dirname, 'ntagram', 'build', 'index.html'))
+			res.sendFile(path.resolve(__dirname, 'front', 'build', 'index.html'))
 	})
 }
 // Launch app to listen to specified port
