@@ -1,18 +1,20 @@
 {
-  "name": "spotifyApp",
+  "name": "musicuristapp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start:server": "nodemon index.js --prefix server",
-    "start:front": "npm start --prefix front",
+    "start:front": "npm start --prefix musicuristapp",
+    "dev": "concurrently \"npm run start:server\" \"npm run start:front\" ",
     "start": "node index.js --prefix server",
-    "build": "npm install --prefix front && npm run build --prefix front"
+    "build": "npm install --prefix musicuristapp && npm run build --prefix musicuristapp"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "nodemon": "^2.0.6"
   },
   "dependencies": {

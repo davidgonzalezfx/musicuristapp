@@ -6,7 +6,7 @@ let bodyParser = require('body-parser');
 // Initialize express
 const app = express();
 // Import routes
-let apiRoutes = require('./server/routes/endpoints.js');
+let apiRoutes = require('./routes/endpoints.js');
 // Configure bodyparser to handle post requests
 app.use(
   bodyParser.urlencoded({
@@ -19,15 +19,15 @@ app.use(bodyParser.json());
 app.use('/api', apiRoutes);
 
 if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('front/build'))
+	app.use(express.static('musicuristapp/build'))
 	const path = require('path')
 	app.get('*', (req, res) => {
-			res.sendFile(path.resolve(__dirname, 'front', 'build', 'index.html'))
+			res.sendFile(path.resolve(__dirname, 'musicuristapp', 'build', 'index.html'))
 	})
 }
 // Launch app to listen to specified port
 
 var port = process.env.PORT || 3001;
 app.listen(port, function () {
-  console.log(`Running favorites_API on port ${port}`);
+  console.log(`Running musicuristApp on port ${port}`);
 });

@@ -6,12 +6,12 @@ const App = () => {
 
   useEffect( () => {
     const fetchData = async () => {
-      const response = await fetch('/api')
+      const response = await fetch('/api/search')
       const data = await response.json()
       console.log('\n\nRESPONSE:\n', data, '\n\n')
       setResponse(data)
     }
-    fetchData()    
+    fetchData()
   }, []);
 
   return (
