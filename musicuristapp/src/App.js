@@ -8,31 +8,24 @@ const App = () => {
     const response = await fetch(`/search?q=${query}`)
     const data = await response.json()
     setResponse(data)
-    console.log({response})
   }
 
-  const searchTracks = (event) => {
-    if (event.target.value.length > 5) fetchData(event.target.value)
-  }
-
-  const Titles = () => {
-    if (response.tracks && response.tracks.items) {
-      console.log(response.tracks.items)
-      return response.tracks.items.map(track => (
+  const Tracks = () => !!response.tracks && !!response.tracks.items && (
+    <>
+      {response.tracks.items.map(track => (
         <p>{track.name} - {track.artists[0].name}</p>
-      ))
-    }
-    return ''
-  }
+      ))}
+    </>
+  )
 
   return (
     <div className="App">
       <header className="App-header">
         <form onSubmit={e => e.preventDefault()}>
           <label>Start search:</label><br />
-          <input  type="text" id="q" name="q" onChange={searchTracks} />
+          <input type="text" id="q" name="q" onChange={e => fetchData(e.target.value)} />
         </form>
-        <Titles />
+        <Tracks />
       </header>
     </div>
   );
