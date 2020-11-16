@@ -8,7 +8,6 @@ const TransformTracks = (response) => {
 			image: track.album.images[0].url,
 			preview: track.preview_url    
 		};
-		console.log({trackToMap})
 		return trackToMap;
 	}
 

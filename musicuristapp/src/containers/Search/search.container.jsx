@@ -6,18 +6,18 @@ import SearchBar from '../../components/SearchBar'
 
 const SearchContainer = ({ getTracks }) => {
 
-	const [query, setquery] = useState('Initial')
+	const [query, setquery] = useState(null)
 
 	useEffect(() => {
-		getTracks()
-	}, [getTracks])
-	console.log('\n\n\n-> Query: ', query, '\n\n\n')
+		if (query !== null && query !== '') getTracks({ query })
+	}, [getTracks, query])
+
 	return <SearchBar query={query} setQuery={setquery} />
 }
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		getTracks: () => dispatch(TracksActions.tracksRequest({query: 'su presencia'}))
+		getTracks: (query) => dispatch(TracksActions.tracksRequest(query))
 	}
 }
 
