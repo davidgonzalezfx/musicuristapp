@@ -1,4 +1,3 @@
-// @flow flow
 import { createReducer } from '@reduxjs/toolkit'
 import TracksTypes from './actionTypes';
 

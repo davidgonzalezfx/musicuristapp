@@ -4,8 +4,10 @@ const tracksRequest = createAction('tracks/request');
 const tracksSuccess = createAction('tracks/success');
 const tracksFailure = createAction('tracks/failure');
 
-export default {
+const TracksTypes = {
   tracksRequest,
   tracksSuccess,
   tracksFailure
 }
+
+export default TracksTypes
