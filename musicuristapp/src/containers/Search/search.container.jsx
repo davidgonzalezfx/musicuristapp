@@ -9,7 +9,7 @@ const SearchContainer = ({ getTracks }) => {
 	const [query, setquery] = useState(null)
 
 	useEffect(() => {
-		if (query !== null && query !== '') getTracks({ query })
+		if (query) getTracks({ query })
 	}, [getTracks, query])
 
 	return <SearchBar query={query} setQuery={setquery} />
