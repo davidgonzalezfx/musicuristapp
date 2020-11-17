@@ -1,0 +1,27 @@
+.headerLayout {
+	background-color: #011627;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1%;
+}
+.headerLayout a {
+	color: white;
+	text-decoration: none;
+}
+
+.headerLayout__logo {
+	display: flex;
+	align-items: center;
+}
+.headerLayout__logo h4 {
+	margin: 0 0 0 5%;
+}
+
+
+.headerLayout__github {
+	border: 1px solid white;
+	border-radius: 4px;
+	padding: 2% 30px;
+	font-size: 1.4rem;
+}

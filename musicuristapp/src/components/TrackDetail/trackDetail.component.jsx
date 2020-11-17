@@ -1,4 +1,5 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 // import ContentLoader from 'react-content-loader'
 
 import styles from './trackDetail.module.css'
@@ -15,7 +16,7 @@ const TrackDetail = ({ track }) => {
 					</div>
 				</>
 			) : (
-				<p>No track :(</p>
+				<Redirect to="/home" />
 			)}
 		</section>
 	)
