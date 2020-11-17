@@ -19,3 +19,15 @@
 	margin: 2% auto;
 	padding-left: 10px;
 }
+
+.search__header button {
+	height: 40px;
+	background: white;
+	border: none;
+	border-radius: 4px;
+	margin-left: 5px;
+	outline: none;
+	position: relative;
+	right: 90px;
+	cursor: pointer;
+}

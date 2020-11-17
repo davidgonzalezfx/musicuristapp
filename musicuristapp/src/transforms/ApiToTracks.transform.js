@@ -6,7 +6,8 @@ const TransformTracks = (response) => {
 			title: track.name,
 			artists: track.artists.map(artists => artists.name),
 			image: track.album.images[0].url,
-			preview: track.preview_url    
+			preview: track.preview_url,
+			spotify: track.uri
 		};
 		return trackToMap;
 	}
