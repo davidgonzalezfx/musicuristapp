@@ -1,13 +1,12 @@
 import React from 'react'
+import styles from './search.module.css'
 
 const SearchBar = ({ setQuery }) => {
-	
 	return (
-		<form onSubmit={(e) => e.preventDefault()}>
-			<label>Start search:</label>
-			<br />
-			<input type='text' id='q' name='q' onChange={(e) => setQuery(e.target.value)} />
-		</form>
+		<section className={styles.search__header}>
+			<label>All about your favorite tracks in one place:</label>
+			<input type='text' onChange={(e) => setQuery(e.target.value)} />
+		</section>
 	)
 }
 

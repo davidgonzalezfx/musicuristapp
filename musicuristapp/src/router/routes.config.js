@@ -1,15 +1,15 @@
 import HomeView from '../views/home';
-// import TrackDetail from '../views/trackDetail';
+import TrackView from '../views/track';
 
 const RoutesConfig = {
   '/home': {
     exact: true,
     component: HomeView
   },
-  // '/track:id': {
-  //   exact: true,
-  //   component: BrandsView
-  // }
+  '/track/:id': {
+    exact: true,
+    component: TrackView
+  }
 }
 
 export { RoutesConfig }

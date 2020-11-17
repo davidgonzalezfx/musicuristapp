@@ -1,0 +1,21 @@
+.search__header {
+	height: 40vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #011627;
+	/* background: rgb(255, 60, 158);
+	background: linear-gradient(0deg, rgba(255, 60, 158, 1) 0%, rgba(254, 1, 102, 1) 100%); */
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.search__header input {
+	width: 40%;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	height: 40px;
+	margin: 2% auto;
+	padding-left: 10px;
+}
